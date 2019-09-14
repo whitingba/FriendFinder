@@ -1,3 +1,5 @@
+var path = require("path");
+
 
 // HTML ROUTING
 module.exports = function (app) {
