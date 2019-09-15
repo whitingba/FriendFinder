@@ -18,13 +18,11 @@
     <div class="col-md-6">
         <div class="form-row">
             <div class="col-auto">
-                <input type="text" class="form-control" placeholder="First name">
+                <input type="text" class="form-control" placeholder="First name" id="firstName">
             </div>
+
             <div class="col-auto">
-                <input type="text" class="form-control" placeholder="Last name">
-            </div>
-            <div class="col-auto">
-                <input type="text" class="form-control" placeholder="Email">
+                <input type="text" class="form-control" placeholder="Link to photo image" id="userImage">
             </div>
         </div>
 
@@ -33,7 +31,7 @@
 
         <div class="form-group">
             <label for="exampleFormControlSelect1">Beer or Food?</label>
-            <select class="form-control" id="exampleFormControlSelect1">
+            <select class="form-control" id="question1">
                 <option value="">Choose an Option</option>
                 <option value="1">1 Total Foodie</option>
                 <option value="2">2</option>
@@ -43,8 +41,8 @@
             </select>
             <br>
             <label for="exampleFormControlSelect1">Movie Theatre or movie at home?</label>
-            <select class="form-control" id="exampleFormControlSelect1">
-                <option value=""></option>
+            <select class="form-control" id="question2">
+                <option value="">Choose an Option</option>
                 <option value="1">1 Love to go out to the movie theatre and have popcorn!</option>
                 <option value="2">2</option>
                 <option value="3">3 In the middle on this one</option>
@@ -53,8 +51,8 @@
             </select>
             <br>
             <label for="exampleFormControlSelect1">Gym or hike?</label>
-            <select class="form-control" id="exampleFormControlSelect1">
-                <option value=""></option>
+            <select class="form-control" id="question3">
+                <option value="">Choose an Option</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3 </option>
@@ -63,8 +61,8 @@
             </select>
             <br>
             <label for="exampleFormControlSelect1">Cats or dogs?</label>
-            <select class="form-control" id="exampleFormControlSelect1">
-                <option value=""></option>
+            <select class="form-control" id="question4">
+                <option value="">Choose an Option</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3 </option>
@@ -73,8 +71,8 @@
             </select>
             <br>
             <label for="exampleFormControlSelect1">Comedy, Action or Drama?</label>
-            <select class="form-control" id="exampleFormControlSelect1">
-                <option value=""></option>
+            <select class="form-control" id="question5">
+                <option value="">Choose an Option</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3 </option>
@@ -83,8 +81,8 @@
             </select>
             <br>
             <label for="exampleFormControlSelect1">Take a walk or take a nap?</label>
-            <select class="form-control" id="exampleFormControlSelect1">
-                <option value=""></option>
+            <select class="form-control" id="question6">
+                <option value="">Choose an Option</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3 </option>
@@ -93,8 +91,8 @@
             </select>
             <br>
             <label for="exampleFormControlSelect1">Clean or cluttered?</label>
-            <select class="form-control" id="exampleFormControlSelect1">
-                <option value=""></option>
+            <select class="form-control" id="question7">
+                <option value="">Choose an Option</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3 </option>
@@ -103,8 +101,8 @@
             </select>
             <br>
             <label for="exampleFormControlSelect1">War or peace?</label>
-            <select class="form-control" id="exampleFormControlSelect1">
-                <option value=""></option>
+            <select class="form-control" id="question8">
+                <option value="">Choose an Option</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3 </option>
@@ -113,8 +111,8 @@
             </select>
             <br>
             <label for="exampleFormControlSelect1">Fly or drive?</label>
-            <select class="form-control" id="exampleFormControlSelect1">
-                <option value=""></option>
+            <select class="form-control" id="question9">
+                <option value="">Choose an Option</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3 </option>
@@ -123,8 +121,8 @@
             </select>
             <br>
             <label for="exampleFormControlSelect1">Video game or book?</label>
-            <select class="form-control" id="exampleFormControlSelect1">
-                <option value=""></option>
+            <select class="form-control" id="question10">
+                <option value="">Choose an Option</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3 </option>
@@ -133,10 +131,52 @@
             </select>
         </div>
         <br>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Submit Survey</a>
+        <button type="submit" class="btn btn-primary btn-lg" role="button" id="subSurvey">Submit Survey</button>
         <br>
         <br>
     </div>
+
+    <footer>
+        <a class="badge badge-warning" style="width: 6rem;" href="#">
+            API Friends List
+        </a>
+
+        <a class="badge badge-warning" style="width: 6rem;" href="https://github.com/whitingba/FriendFinder">GitHub
+            Repo</a>
+
+
+    </footer>
+
+    <script type="text/javascript">
+        $('#subSurvey').on('click', function (event) {
+            event.preventDefault();
+
+            var newFriend = {
+                name: $('#firstName').val().trim(),
+                photo: $('#userImage').val().trim(),
+                score: [
+                    $('#question1').val().trim(),
+                    $('#question2').val().trim(),
+                    $('#question3').val().trim(),
+                    $('#question4').val().trim(),
+                    $('#question5').val().trim(),
+                    $('#question6').val().trim(),
+                    $('#question7').val().trim(),
+                    $('#question8').val().trim(),
+                    $('#question9').val().trim(),
+                    $('#question10').val().trim()
+                ]
+            }
+
+            //ajax post to friends api to post new user data
+
+
+
+            //clear the data upon submitting the form
+
+        })
+    </script>
+
 </body>
 
 </html>
