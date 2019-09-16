@@ -6,7 +6,7 @@ This particular assignment was to develop an app that would pair the user with a
 answers to 10 questions. 
 
 ### Links
-(HEROKU DEPLYOED SITE LINK GOES HERE)
+https://desolate-sierra-56874.herokuapp.com/
 
 ### Screenshots 
 
