@@ -53,81 +53,83 @@
             <label for="exampleFormControlSelect1">Gym or hike?</label>
             <select class="form-control" id="question3">
                 <option value="">Choose an Option</option>
-                <option value="1">1</option>
+                <option value="1">1 - Indoors, no bugs please!</option>
                 <option value="2">2</option>
-                <option value="3">3 </option>
+                <option value="3">3 Short walk or bike ride</option>
                 <option value="4">4</option>
-                <option value="5">5</option>
+                <option value="5">5 - The great outdoors!
+
+                </option>
             </select>
             <br>
             <label for="exampleFormControlSelect1">Cats or dogs?</label>
             <select class="form-control" id="question4">
                 <option value="">Choose an Option</option>
-                <option value="1">1</option>
+                <option value="1">1 - I like to cuddle on the couch with my cat</option>
                 <option value="2">2</option>
-                <option value="3">3 </option>
+                <option value="3">3 - Both, my dog needs company </option>
                 <option value="4">4</option>
-                <option value="5">5</option>
+                <option value="5">5 - Dogs, they can take walks, hikes, and can play fetch</option>
             </select>
             <br>
             <label for="exampleFormControlSelect1">Comedy, Action or Drama?</label>
             <select class="form-control" id="question5">
                 <option value="">Choose an Option</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3 </option>
-                <option value="4">4</option>
-                <option value="5">5</option>
+                <option value="1">1 - Drama</option>
+                <option value="2">2 - Dramedy</option>
+                <option value="3">3 - Comedy </option>
+                <option value="4">4 - Action Comedy</option>
+                <option value="5">5 - Action</option>
             </select>
             <br>
             <label for="exampleFormControlSelect1">Take a walk or take a nap?</label>
             <select class="form-control" id="question6">
                 <option value="">Choose an Option</option>
-                <option value="1">1</option>
+                <option value="1">1 - I love a long afternoon nap</option>
                 <option value="2">2</option>
-                <option value="3">3 </option>
+                <option value="3">3 - Short cat nap for me </option>
                 <option value="4">4</option>
-                <option value="5">5</option>
+                <option value="5">5 - If I feel tired I take a walk </option>
             </select>
             <br>
             <label for="exampleFormControlSelect1">Clean or cluttered?</label>
             <select class="form-control" id="question7">
                 <option value="">Choose an Option</option>
-                <option value="1">1</option>
+                <option value="1">1 - Clean as a whistle</option>
                 <option value="2">2</option>
-                <option value="3">3 </option>
+                <option value="3">3 - Clean, but piles here and there </option>
                 <option value="4">4</option>
-                <option value="5">5</option>
+                <option value="5">5 - Cluttered and can't see my floors</option>
             </select>
             <br>
             <label for="exampleFormControlSelect1">War or peace?</label>
             <select class="form-control" id="question8">
                 <option value="">Choose an Option</option>
-                <option value="1">1</option>
+                <option value="1">1 - Love to argue my point of view</option>
                 <option value="2">2</option>
-                <option value="3">3 </option>
+                <option value="3">3 - In the middle </option>
                 <option value="4">4</option>
-                <option value="5">5</option>
+                <option value="5">5 - Love, not war approach</option>
             </select>
             <br>
             <label for="exampleFormControlSelect1">Fly or drive?</label>
             <select class="form-control" id="question9">
                 <option value="">Choose an Option</option>
-                <option value="1">1</option>
+                <option value="1">1 - Like to get to my destination as quickly as possible</option>
                 <option value="2">2</option>
-                <option value="3">3 </option>
+                <option value="3">3 - I could go either way on this one, no preference </option>
                 <option value="4">4</option>
-                <option value="5">5</option>
+                <option value="5">5 - Love to drive to my destination so I can stop and sightsee along the way</option>
             </select>
             <br>
             <label for="exampleFormControlSelect1">Video game or book?</label>
             <select class="form-control" id="question10">
                 <option value="">Choose an Option</option>
-                <option value="1">1</option>
+                <option value="1">1 - Like to unwind in front of the tv playing my favorite game</option>
                 <option value="2">2</option>
-                <option value="3">3 </option>
+                <option value="3">3 - Game or book, just depends on my mood. </option>
                 <option value="4">4</option>
-                <option value="5">5</option>
+                <option value="5">5 - Best way to get away is with a good book</option>
             </select>
         </div>
         <br>
@@ -147,7 +149,12 @@
 
     </footer>
 
+
+    <!-- TODO: Need to complete a modal -->
+
     <script type="text/javascript">
+
+        //on click function to capture user data
         $('#subSurvey').on('click', function (event) {
             event.preventDefault();
 
@@ -168,9 +175,10 @@
                 ]
             }
 
-            //ajax post to friends api to post new user data
+            //TODO:ajax post to friends api to post new user data
             $.post('/api/friends', newFriend,
                 function (data) {
+
 
                 })
 
@@ -194,3 +202,6 @@
 </body>
 
 </html>
+
+<!-- 
+TODO:Update readme file and deploy to Heroku-->
