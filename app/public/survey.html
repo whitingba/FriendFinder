@@ -155,6 +155,32 @@
 
     <!-- TODO: Need to complete a modal -->
 
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Your new best friend!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h3 id="newFriendName"></h3>
+                    <img id="newFriendImage"
+                        src="https://image.shutterstock.com/image-vector/oops-trendy-calligraphy-vector-illustration-260nw-1185413707.jpg"
+                        alt="Placeholder image">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">ok</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
     <script type="text/javascript">
 
         //on click function to capture user data
@@ -164,7 +190,7 @@
             var newFriend = {
                 name: $('#firstName').val().trim(),
                 photo: $('#userImage').val().trim(),
-                score: [
+                scores: [
                     $('#question1').val().trim(),
                     $('#question2').val().trim(),
                     $('#question3').val().trim(),
@@ -181,10 +207,12 @@
             //TODO:ajax post to friends api to post new user data
             $.post('/api/friends', newFriend,
                 function (data) {
+                    $('#newFriendName').text(data.name);
+                    $('#newFriendImage').attr("src", data.photo);
 
+                });
 
-
-                })
+            $('.modal-body').modal();
 
 
             //clear the data upon submitting the form
