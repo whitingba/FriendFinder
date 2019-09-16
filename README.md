@@ -23,9 +23,9 @@ answers to 10 questions.
 
 ### Technologies Used
 
-Node.js
-Express
-Bootstrap for the style elements
+*Node.js
+*Express
+*Bootstrap for the style elements
 
 ### Author
 Barbara Whiting
