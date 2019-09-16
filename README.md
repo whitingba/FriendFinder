@@ -1,7 +1,9 @@
 # FriendFinder
 
 ### Background
-This was an assignment for week 13 of the DU Coding Bootcamp. This week was spent exploring Node Servers and Express. 
+This was an assignment for week 13 of the DU Coding Bootcamp. This section of the program was spent exploring Node Servers and Express. 
+This particular assignment was to develop an app that would pair the user with a compatible friend in the firend database based on their 
+answers to 10 questions. 
 
 ### Links
 (HEROKU DEPLYOED SITE LINK GOES HERE)
@@ -21,6 +23,9 @@ This was an assignment for week 13 of the DU Coding Bootcamp. This week was spen
 
 ### Technologies Used
 
+Node.js
+Express
+Bootstrap for the style elements
 
 ### Author
 Barbara Whiting
