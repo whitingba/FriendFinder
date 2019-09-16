@@ -1,6 +1,7 @@
 // require the basic npm packages:`express` and `path`.
 
 var express = require("express");
+var jquery = require("jquery");
 
 
 // Tells node that we are creating an "express" server
