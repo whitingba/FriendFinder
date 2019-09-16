@@ -6,4 +6,4 @@
 
 ### Screenshots 
 
-![Image of main html page](apps/data/images/main_page.png)
+![Image of main html page](https://github.com/whitingba/FriendFinder/blob/master/app/data/images/Main_page.PNG?raw=true)
